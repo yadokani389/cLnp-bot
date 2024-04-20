@@ -3,4 +3,4 @@
 /.cache/
 .env
 .envrc
-compile-commands.txt
+compile-commands.json
