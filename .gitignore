@@ -1,0 +1,6 @@
+/build/
+/.direnv/
+/.cache/
+.env
+.envrc
+compile-commands.txt
