@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/home/kani/projects/cpp/cLnp-bot/build",
-  "command": "/nix/store/ac1hb5dc2z4biwgy8mjrhlifffkkrvdq-gcc-wrapper-13.2.0/bin/g++  -I/home/kani/projects/cpp/cLnp-bot/include -std=gnu++20 -o CMakeFiles/cLnp-bot.dir/src/main.cpp.o -c /home/kani/projects/cpp/cLnp-bot/src/main.cpp",
-  "file": "/home/kani/projects/cpp/cLnp-bot/src/main.cpp",
-  "output": "CMakeFiles/cLnp-bot.dir/src/main.cpp.o"
-}
-]
