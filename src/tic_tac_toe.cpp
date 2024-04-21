@@ -92,7 +92,7 @@ void tic_tac_toe_init(dpp::cluster &bot) {
         msg.add_component(cmp);
       }
 
-      bot.message_edit_sync(msg);
+      bot.message_edit(msg);
       event.reply();
     }
   });
