@@ -3,7 +3,12 @@
 #include <tic_tac_toe.hpp>
 
 int main() {
-  const std::string BOT_TOKEN = std::getenv("BOT_TOKEN");
+  const char *BOT_TOEKN_PTR = std::getenv("BOT_TOKEN");
+  if (!BOT_TOEKN_PTR) {
+    std::cout << "Set enviroment viriable BOT_TOKEN.\n";
+    return 0;
+  }
+  const std::string BOT_TOKEN(BOT_TOEKN_PTR);
   if (BOT_TOKEN.empty()) {
     std::cout << "Set enviroment viriable BOT_TOKEN.\n";
     return 0;
@@ -15,7 +20,11 @@ int main() {
 
   bot.on_slashcommand([](const dpp::slashcommand_t &event) {
     if (event.command.get_command_name() == "ping") {
-      event.reply("Pong!");
+      auto embed = dpp::embed()
+                       .set_title("embed")
+                       .add_field("name", "<t:1713706320:d>");
+      dpp::message msg(event.command.channel_id, embed);
+      event.reply(msg);
     }
   });
 

@@ -74,7 +74,7 @@ void tic_tac_toe_init(dpp::cluster &bot) {
         }
       }
 
-      if (std::count(field.begin(), field.end(), '\0') == 0) {
+      if (std::count(field.begin(), field.end(), '\0') == 0 && !end) {
         msg.content = "draw!";
         end = true;
       }
