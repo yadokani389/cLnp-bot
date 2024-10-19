@@ -49,10 +49,7 @@ void tic_tac_toe_init(dpp::cluster &bot) {
       size_t y = event.custom_id[event.custom_id.size() - 1] - '0';
       size_t x = event.custom_id[event.custom_id.size() - 2] - '0';
 
-      for (size_t i = 0; i < 3; i++)
-        for (size_t j = 0; j < 3; j++)
-          if (x == i && y == j)
-            field[j + i * 3] = pre_turn;
+      field[y + x * 3] = pre_turn;
 
       bool end = false;
       {
